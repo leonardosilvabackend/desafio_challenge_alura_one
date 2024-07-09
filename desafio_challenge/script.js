@@ -13,11 +13,12 @@ document.getElementById('botaoDescriptografar').addEventListener('click', functi
 });
 
 document.getElementById('botaoCopiar').addEventListener('click', function() {
-  let textoSaida = document.getElementById('textoSaida').innerText;
-  navigator.clipboard.writeText(textoSaida).then(() => {
-    alert('Texto copiado para a área de transferência');
+  let areaDeTexto = document.getElementById('areaDeTexto').value;
+  navigator.clipboard.writeText(areaDeTexto).then(() => {
+  alert('Texto copiado para a área de transferência');
   });
 });
+
 
 document.getElementById('botaoLimpar').addEventListener('click', function() {
   document.getElementById('areaDeTexto').value='';
